@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@feathersjs/client": "^3.5.3",
+    "aor-feathers-client": "^2.0.0",
     "react": "^16.4.1",
+    "react-admin": "^2.1.1",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
