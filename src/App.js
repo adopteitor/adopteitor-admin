@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import 'babel-polyfill';
+import { Admin, Resource } from 'react-admin';
+import { authClient, restClient } from 'aor-feathers-client';
+import feathersClient from './feathersClient';
+// import { UsersList } from './services/users';
+import { AnimalList, AnimalEdit, AnimalCreate } from './services/animals';
+import { Delete } from 'react-admin';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const authClientOptions = {
+  storageKey: 'feathers-jwt',
+  authenticate: { strategy: 'local' }
+};
+
+const options = { id: '_id', usePatch: true };
+
+const App = () => (
+  <Admin dataProvider={restClient(feathersClient, options)} authProvider={authClient(feathersClient, authClientOptions)}>
+    <Resource name="animals" list={AnimalList} create={AnimalCreate} edit={AnimalEdit} remove={Delete} />
+  </Admin>
+);
 
 export default App;
