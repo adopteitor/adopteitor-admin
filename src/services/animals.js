@@ -1,5 +1,5 @@
  import React from 'react';
-import { Filter, DisabledInput, ReferenceInput, List, Edit, Create, SimpleForm, Datagrid, TextField, SelectInput, TextInput, EditButton, DateInput } from 'react-admin';
+import { Filter, DisabledInput, ReferenceInput, List, Edit, Create, SimpleForm, Datagrid, TextField, SelectInput, TextInput, EditButton, DateInput, DateField } from 'react-admin';
 import RichTextInput from 'ra-input-rich-text';
 
 export const AnimalFilter = (props) => (
@@ -19,7 +19,7 @@ export const AnimalList = (props) => (
             <TextField source="sex" />
             <TextField source="location" />
             <TextField source="status" />
-            <TextField source="entryDate" />
+            <DateField source="entryDate" />
             <EditButton />
         </Datagrid>
     </List>
