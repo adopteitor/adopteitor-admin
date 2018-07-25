@@ -46,7 +46,13 @@ export const AnimalEdit = (props) => (
                 { id: 'female', name: 'Female' },
                 { id: 'other', name: 'Other' },
             ]} />
+            <ReferenceInput label="species" reference="species" source="specie">
+            <SelectInput optionText="displayName" />
+            </ReferenceInput>
             <TextInput source="location" />
+            <ReferenceInput label="breeds" reference="breeds" source="breed">
+              <SelectInput optionText="displayName" />
+            </ReferenceInput>
             <DateInput source="entryDate" />
             <SelectInput source="status" choices={[
                 { id: 'inAdoption', name: 'In Adoption' },
@@ -74,7 +80,13 @@ export const AnimalCreate = (props) => (
                 { id: 'other', name: 'Other' },
             ]} />
             <TextInput source="location" />
-            <TextInput source="entryDate" />
+            <ReferenceInput label="species" source="specie" reference="species">
+              <SelectInput optionText="displayName" />
+            </ReferenceInput>
+            <ReferenceInput label="breed" source="breed" reference="breeds">
+              <SelectInput optionText="displayName" />
+            </ReferenceInput>
+            <DateInput source="entryDate" />
             <SelectInput source="status" choices={[
                 { id: 'inAdoption', name: 'In Adoption' },
                 { id: 'adopted', name: 'adopted' },
