@@ -72,7 +72,7 @@ export const AnimalCreate = (props) => (
                 { id: 'adult', name: 'Adult' },
                 { id: 'oldie', name: 'Oldie' },
             ]} />
-            <TextInput source="dateOfBirth" />
+            <DateInput source="dateOfBirth" />
             <RichTextInput source="description" />
             <SelectInput source="sex" choices={[
                 { id: 'male', name: 'Male' },
