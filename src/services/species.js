@@ -4,9 +4,6 @@ import { Filter, DisabledInput, ReferenceInput, List, Edit, Create, SimpleForm, 
 export const SpecieFilter = (props) => (
    <Filter {...props}>
     <TextInput label="Search" source="q" alwaysOn />
-    <ReferenceInput label="Team" source="_id" reference="teams" allowEmpty>
-      <SelectInput optionText="name" />
-    </ReferenceInput>
    </Filter>
 );
 

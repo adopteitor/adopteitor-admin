@@ -5,9 +5,6 @@ import RichTextInput from 'ra-input-rich-text';
 export const AnimalFilter = (props) => (
    <Filter {...props}>
     <TextInput label="Search" source="q" alwaysOn />
-    <ReferenceInput label="Team" source="_id" reference="teams" allowEmpty>
-      <SelectInput optionText="name" />
-    </ReferenceInput>
    </Filter>
 );
 
