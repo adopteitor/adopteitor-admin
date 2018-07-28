@@ -5,6 +5,7 @@
   "dependencies": {
     "@feathersjs/client": "^3.5.3",
     "aor-feathers-client": "^2.0.0",
+    "ra-input-rich-text": "^2.1.0",
     "react": "^16.4.1",
     "react-admin": "^2.1.1",
     "react-dom": "^16.4.1"

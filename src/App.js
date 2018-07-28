@@ -5,6 +5,10 @@ import { authClient, restClient } from 'aor-feathers-client';
 import feathersClient from './feathersClient';
 // import { UsersList } from './services/users';
 import { AnimalList, AnimalEdit, AnimalCreate } from './services/animals';
+import { HumanList, HumanEdit, HumanCreate } from './services/humans';
+import { ContractList, ContractEdit, ContractCreate } from './services/contracts';
+import { SpecieList, SpecieEdit, SpecieCreate } from './services/species';
+import { BreedList, BreedEdit, BreedCreate } from './services/breeds';
 import { Delete } from 'react-admin';
 
 const authClientOptions = {
@@ -17,6 +21,10 @@ const options = { id: '_id', usePatch: true };
 const App = () => (
   <Admin dataProvider={restClient(feathersClient, options)} authProvider={authClient(feathersClient, authClientOptions)}>
     <Resource name="animals" list={AnimalList} create={AnimalCreate} edit={AnimalEdit} remove={Delete} />
+    <Resource name="humans" list={HumanList} create={HumanCreate} edit={HumanEdit} remove={Delete} />
+    <Resource name="contracts" list={ContractList} create={ContractCreate} edit={ContractEdit} remove={Delete} />
+    <Resource name="species" list={SpecieList} create={SpecieCreate} edit={SpecieEdit} remove={Delete} />
+    <Resource name="breeds" list={BreedList} create={BreedCreate} edit={BreedEdit} remove={Delete} />
   </Admin>
 );
 
