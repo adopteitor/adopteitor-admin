@@ -1,5 +1,5 @@
  import React from 'react';
-import { Filter, DisabledInput, ReferenceInput, List, Edit, Create, SimpleForm, Datagrid, TextField, SelectInput, TextInput, EditButton, BooleanInput, BooleanField } from 'react-admin';
+import { Filter, DisabledInput, List, Edit, Create, SimpleForm, Datagrid, TextField, TextInput, EditButton, BooleanInput, BooleanField } from 'react-admin';
 
 export const BreedFilter = (props) => (
    <Filter {...props}>

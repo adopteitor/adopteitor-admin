@@ -1,5 +1,5 @@
  import React from 'react';
-import { Filter, DisabledInput, ReferenceInput, List, Edit, Create, SimpleForm, Datagrid, TextField, SelectInput, TextInput, EditButton } from 'react-admin';
+import { Filter, DisabledInput, List, Edit, Create, SimpleForm, Datagrid, TextField, SelectInput, TextInput, EditButton } from 'react-admin';
 
 export const HumanFilter = (props) => (
    <Filter {...props}>
